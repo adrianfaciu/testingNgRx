@@ -3,7 +3,7 @@ import { Effect, Actions } from '@ngrx/effects';
 
 import 'rxjs/add/operator/map';
 
-import { INCREMENT_ACTION, UPDATE_TEXT_ACTION } from './actions';
+import { INCREMENT_ACTION, UPDATE_TEXT_ACTION } from './app.actions';
 
 @Injectable()
 export class AppEffects {

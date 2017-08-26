@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store, Action } from '@ngrx/store';
-import { AppState } from './store/reducer';
-import { INCREMENT_ACTION } from './store/actions';
+import { AppState } from './store/app.reducer';
+import { INCREMENT_ACTION } from './store/app.actions';
 
 @Component({
   selector: 'app-root',

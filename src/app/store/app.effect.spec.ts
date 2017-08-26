@@ -1,8 +1,8 @@
 import { Actions } from '@ngrx/effects';
 import { hot } from 'jasmine-marbles';
 
-import { AppEffects } from './effect';
-import * as actions from './actions';
+import { AppEffects } from './app.effect';
+import * as actions from './app.actions';
 
 describe('testing effects', () => {
     it('basic test', () => {

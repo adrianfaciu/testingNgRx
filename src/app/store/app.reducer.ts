@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { INCREMENT_ACTION, UPDATE_TEXT_ACTION } from './actions';
+import { INCREMENT_ACTION, UPDATE_TEXT_ACTION } from './app.actions';
 
 export interface AppState {
     count: number;

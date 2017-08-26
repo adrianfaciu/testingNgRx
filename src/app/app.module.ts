@@ -5,8 +5,8 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 
-import { AppEffects } from './store/effect';
-import { reducer } from './store/reducer';
+import { AppEffects } from './store/app.effect';
+import { reducer } from './store/app.reducer';
 
 import { AppComponent } from './app.component';
 
