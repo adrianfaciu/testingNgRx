@@ -1,15 +1,15 @@
 import { Actions } from '@ngrx/effects';
-import { hot } from 'jasmine-marbles';
+import { cold } from 'jasmine-marbles';
 
 import { AppEffects } from './app.effect';
 import * as actions from './app.actions';
 
-describe('testing effects', () => {
+describe('testing app effects', () => {
     it('basic test', () => {
-        const source = hot('a', { a: { type: actions.INCREMENT_ACTION } });
+        const source = cold('a', { a: { type: actions.INCREMENT_ACTION } });
         const effects = new AppEffects(new Actions(source));
 
-        const expected = hot('a', { a: { type: actions.UPDATE_TEXT_ACTION } });
+        const expected = cold('a', { a: { type: actions.UPDATE_TEXT_ACTION } });
         expect(effects.updateTextOnIncrement$).toBeObservable(expected);
     });
 });

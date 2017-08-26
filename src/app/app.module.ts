@@ -9,6 +9,8 @@ import { AppEffects } from './store/app.effect';
 import { reducer } from './store/app.reducer';
 
 import { AppComponent } from './app.component';
+import { AppService } from './services/app.service';
+import { AppServiceEffect } from './store/app.service-effect';
 
 @NgModule({
   declarations: [
@@ -19,9 +21,9 @@ import { AppComponent } from './app.component';
 
     StoreModule.forRoot({state: reducer}),
     StoreDevtoolsModule.instrument(),
-    EffectsModule.forRoot([AppEffects]),
+    EffectsModule.forRoot([AppEffects, AppServiceEffect]),
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

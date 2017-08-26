@@ -3,7 +3,7 @@ import { Effect, Actions } from '@ngrx/effects';
 
 import 'rxjs/add/operator/map';
 
-import { INCREMENT_ACTION, UPDATE_TEXT_ACTION } from './app.actions';
+import * as actions from './app.actions';
 
 @Injectable()
 export class AppEffects {
@@ -11,6 +11,6 @@ export class AppEffects {
 
     @Effect()
     updateTextOnIncrement$ = this.actions$
-        .ofType(INCREMENT_ACTION)
-        .map(_ => ({ type: UPDATE_TEXT_ACTION }));
+        .ofType(actions.INCREMENT_ACTION)
+        .map(_ => ({ type: actions.UPDATE_TEXT_ACTION }));
 }
