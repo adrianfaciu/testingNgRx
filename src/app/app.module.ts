@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { AppService } from './services/app.service';
 import { AppServiceEffect } from './store/app.service-effect';
 import { AppStateEffect } from './store/app.state-effect';
+import { AppTimeEffect } from './store/app.time-effect';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,12 @@ import { AppStateEffect } from './store/app.state-effect';
 
     StoreModule.forRoot({state: reducer}),
     StoreDevtoolsModule.instrument(),
-    EffectsModule.forRoot([AppEffects, AppServiceEffect, AppStateEffect]),
+    EffectsModule.forRoot([
+      AppEffects,
+      AppServiceEffect,
+      AppStateEffect,
+      AppTimeEffect,
+    ]),
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
