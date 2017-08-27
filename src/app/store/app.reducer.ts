@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { INCREMENT_ACTION, UPDATE_TEXT_ACTION } from './app.actions';
+import * as actions from './app.actions';
 
 export interface AppState {
     count: number;
@@ -13,12 +13,12 @@ export const INITIAL_STATE: AppState = {
 
 export function reducer(state = INITIAL_STATE, action: Action) {
     switch (action.type) {
-        case INCREMENT_ACTION:
+        case actions.INCREMENT_ACTION:
             return {
                 ...state,
                 count: state.count++,
             };
-        case UPDATE_TEXT_ACTION:
+        case actions.UPDATE_TEXT_ACTION:
             return {
                 ...state,
                 text: 'Count value is: ' + state.count,
