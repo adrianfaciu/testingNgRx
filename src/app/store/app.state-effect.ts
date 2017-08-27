@@ -3,6 +3,7 @@ import { Actions, Effect } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 
 import 'rxjs/add/operator/withLatestFrom';
+import 'rxjs/add/operator/map';
 
 import { AppState } from './app.reducer';
 import * as actions from './app.actions';
